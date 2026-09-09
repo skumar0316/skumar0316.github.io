@@ -13,8 +13,22 @@
             background-color: #f4f4f9;
             color: #333;
             margin: 0;
-            padding: 2rem;
+            padding: 1rem 2rem 2rem 2rem;
             min-height: 100vh;
+        }
+        /* Development Notice Banner */
+        .dev-banner {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #856404;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .main-layout {
             display: flex;
@@ -122,6 +136,11 @@
 </head>
 <body>
 
+    <!-- Development Banner at Top Center -->
+    <div class="dev-banner">
+        * This website is still being developed and some links may not work!
+    </div>
+
     <div class="main-layout">
         <!-- Left Column: Profile & Resume -->
         <aside class="left-column">
@@ -136,7 +155,6 @@
             <div class="resume-container">
                 <h2>My Resume</h2>
                 <p>Click below to view or download my latest professional resume.</p>
-                <!-- Resume link updated -->
                 <a href="Sachin Kumar Resume.pdf" target="_blank" class="btn-resume">View Resume (PDF)</a>
             </div>
         </aside>
