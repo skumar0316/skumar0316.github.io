@@ -3,52 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Personal Portfolio</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-        }
-        .container {
-            text-align: center;
-            background: white;
             padding: 2rem;
+            min-height: 100vh;
+        }
+        .main-layout {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Left Column */
+        .left-column {
+            flex: 1;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .profile-container, .resume-container {
+            background: white;
+            padding: 1.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
+        }
+        .profile-container {
+            text-align: left;
         }
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
             border: 3px solid #007bff;
         }
         h1 {
+            margin-top: 0;
             margin-bottom: 0.5rem;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: #007bff;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
         }
         p {
             color: #666;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .btn-resume {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        .btn-resume:hover {
+            background-color: #0056b3;
+        }
+
+        /* Right Column */
+        .right-column {
+            flex: 1.5;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .project-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            background-color: #fafafa;
+        }
+        .project-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #222;
+        }
+        .project-card p {
+            margin-bottom: 0;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .main-layout {
+                flex-direction: column;
+            }
+            .left-column {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img class="profile-pic" src="Sachin.jpg" alt="Sachin's Profile Picture">
-        
-        <h1>Welcome to My Website!</h1>
-        <p>Hi there! Thanks for visiting my personal page. Feel free to look around.</p>
+    <div class="main-layout">
+        <!-- Left Column: Profile & Resume -->
+        <aside class="left-column">
+            <!-- Top Left Container: Profile -->
+            <div class="profile-container">
+                <img class="profile-pic" src="Sachin.jpg" alt="Sachin's Profile Picture">
+                <h1>Welcome to My Website!</h1>
+                <p>Hi there! Thanks for visiting my personal page. Feel free to explore my background and research projects.</p>
+            </div>
+
+            <!-- Resume Section Below Profile -->
+            <div class="resume-container">
+                <h2>My Resume</h2>
+                <p>Click below to view or download my latest professional resume.</p>
+                <!-- REPLACE 'resume.pdf' WITH YOUR ACTUAL RESUME FILE NAME -->
+                <a href="resume.pdf" target="_blank" class="btn-resume">View Resume (PDF)</a>
+            </div>
+        </aside>
+
+        <!-- Right Column: Projects -->
+        <main class="right-column">
+            <h2>Scientific Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Project 1: Advanced Energy Storage & Battery Development</h3>
+                    <p>Research and process optimization focused on novel battery chemistry scaling, electrode development, and manufacturing yield improvements.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 2: Electrochemistry & Electrochemical Synthesis</h3>
+                    <p>Investigation into electrochemical systems, including cell design, electrolyte transport phenomena, and efficiency optimization.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 3: Advanced Materials Synthesis & Characterization</h3>
+                    <p>Synthesis of functional materials and structural metrology utilizing analytical characterization techniques such as SEM/EDS, XRD, and spectroscopy.</p>
+                </div>
+
+            </div>
+        </main>
     </div>
 
 </body>
