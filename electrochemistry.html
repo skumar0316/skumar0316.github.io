@@ -80,6 +80,32 @@
             color: #555;
             line-height: 1.6;
         }
+        /* Link styles for Work Item 2 */
+        .showcase-link {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .showcase-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .view-gif-btn {
+            display: inline-block;
+            margin-top: 0.8rem;
+            padding: 0.5rem 1rem;
+            background-color: #e9ecef;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .view-gif-btn:hover {
+            background-color: #007bff;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -101,9 +127,16 @@
             <p>Details regarding high-efficiency electrolyzer process design, ink deposition, and scaling synthetic fuel production pathways.</p>
         </div>
 
+        <!-- Work Showcase 2 updated to target dac_simulation.gif -->
         <div class="work-item">
-            <h3>Work Showcase 2: Bipolar Membrane Electrodialysis & Species Transport</h3>
+            <h3>
+                <a href="dac_simulation.gif" target="_blank" class="showcase-link">
+                    Work Showcase 2: Direct Air Capture & Species Transport Simulation &rarr;
+                </a>
+            </h3>
             <p>Multiphysics modeling and experimental evaluation of ionic species transport across bipolar membranes in electrochemical separation cell architectures.</p>
+            <!-- Direct button link to open the GIF in full page -->
+            <a href="dac_simulation.gif" target="_blank" class="view-gif-btn">&#127916; View Full-Page GIF Animation</a>
         </div>
 
         <div class="work-item">
