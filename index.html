@@ -112,12 +112,29 @@
             border-radius: 8px;
             padding: 1.2rem;
             background-color: #fafafa;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .project-card.clickable {
+            cursor: pointer;
+        }
+        .project-card.clickable:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background-color: #f0f7ff;
+        }
+        .project-title-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         .project-card h3 {
             margin-top: 0;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
             color: #222;
+        }
+        .project-card.clickable h3 {
+            color: #007bff;
         }
         .project-card p {
             margin-bottom: 0;
@@ -169,9 +186,12 @@
                     <p>Research and process optimization focused on novel battery chemistry scaling, electrode development, and manufacturing yield improvements.</p>
                 </div>
 
-                <div class="project-card">
-                    <h3>Project 2: Electrochemistry & Electrochemical Synthesis</h3>
-                    <p>Investigation into electrochemical systems, including cell design, electrolyte transport phenomena, and efficiency optimization.</p>
+                <!-- Linked Project Card -->
+                <div class="project-card clickable">
+                    <a href="electrochemistry.html" class="project-title-link">
+                        <h3>Project 2: Electrochemistry & Electrochemical Synthesis &rarr;</h3>
+                        <p>Investigation into electrochemical systems, including cell design, electrolyte transport phenomena, and efficiency optimization. (Click to learn more)</p>
+                    </a>
                 </div>
 
                 <div class="project-card">
