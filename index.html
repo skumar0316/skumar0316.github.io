@@ -100,43 +100,46 @@
             padding: 1.5rem 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
-        .projects-grid {
+        .projects-grid, .publications-list {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
             margin-top: 1rem;
         }
-        .project-card {
+        .project-card, .pub-card {
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 1.2rem;
             background-color: #fafafa;
             transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
-        .project-card.clickable {
+        .project-card.clickable, .pub-card.clickable {
             cursor: pointer;
         }
-        .project-card.clickable:hover {
+        .project-card.clickable:hover, .pub-card.clickable:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             background-color: #f0f7ff;
         }
-        .project-title-link {
+        .project-title-link, .pub-title-link {
             text-decoration: none;
             color: inherit;
             display: block;
         }
-        .project-card h3 {
+        .project-card h3, .pub-card h3 {
             margin-top: 0;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
             color: #222;
         }
-        .project-card.clickable h3 {
+        .project-card.clickable h3, .pub-card.clickable h3 {
             color: #007bff;
         }
-        .project-card p {
+        .project-card p, .pub-card p {
             margin-bottom: 0;
         }
 
@@ -176,30 +179,49 @@
             </div>
         </aside>
 
-        <!-- Right Column: Projects -->
+        <!-- Right Column: Projects & Publications -->
         <main class="right-column">
-            <h2>Scientific Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <h3>Project 1: Advanced Energy Storage & Battery Development</h3>
-                    <p>Research and process optimization focused on novel battery chemistry scaling, electrode development, and manufacturing yield improvements.</p>
-                </div>
+            <!-- Scientific Projects Section -->
+            <section>
+                <h2>Scientific Projects</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <h3>Project 1: Advanced Energy Storage & Battery Development</h3>
+                        <p>Research and process optimization focused on novel battery chemistry scaling, electrode development, and manufacturing yield improvements.</p>
+                    </div>
 
-                <!-- Linked Project Card -->
-                <div class="project-card clickable">
-                    <a href="electrochemistry.html" class="project-title-link">
-                        <h3>Project 2: Electrochemistry & Electrochemical Synthesis &rarr;</h3>
-                        <p>Investigation into electrochemical systems, including cell design, electrolyte transport phenomena, and efficiency optimization. (Click to learn more)</p>
-                    </a>
-                </div>
+                    <!-- Linked Project Card -->
+                    <div class="project-card clickable">
+                        <a href="electrochemistry.html" class="project-title-link">
+                            <h3>Project 2: Electrochemistry & Electrochemical Synthesis &rarr;</h3>
+                            <p>Investigation into electrochemical systems, including cell design, electrolyte transport phenomena, and efficiency optimization. (Click to learn more)</p>
+                        </a>
+                    </div>
 
-                <div class="project-card">
-                    <h3>Project 3: Advanced Materials Synthesis & Characterization</h3>
-                    <p>Synthesis of functional materials and structural metrology utilizing analytical characterization techniques such as SEM/EDS, XRD, and spectroscopy.</p>
-                </div>
+                    <div class="project-card">
+                        <h3>Project 3: Advanced Materials Synthesis & Characterization</h3>
+                        <p>Synthesis of functional materials and structural metrology utilizing analytical characterization techniques such as SEM/EDS, XRD, and spectroscopy.</p>
+                    </div>
 
-            </div>
+                </div>
+            </section>
+
+            <!-- Publications & Patents Section -->
+            <section>
+                <h2>My Publications / Patents</h2>
+                <div class="publications-list">
+                    
+                    <!-- Clickable Google Scholar Profile Card -->
+                    <div class="pub-card clickable">
+                        <a href="https://scholar.google.com/citations?hl=en&user=OByBFlUAAAAJ&view_op=list_works&gmla=AO4B3jt5UfkTLNP06N1DDAfiIb4HXJrCnNOVqMD7RAC1dexj9fZNSiHW0gy-grp2eSt9cU3nAcuHr1RnsdC02_5bW0_EMKiovoiULHhGB2AK69sjwqJC2lUX7tjhlJ2-Fwabxa9RIFE" target="_blank" class="pub-title-link">
+                            <h3>Patents, Peer-Reviewed Publications & Technical Reports &rarr;</h3>
+                            <p>Complete record of research papers, patents, and citations on Google Scholar covering battery separators, electrochemistry, and advanced materials. (Click to view full profile)</p>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
         </main>
     </div>
 
